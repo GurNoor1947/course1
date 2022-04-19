@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+</head>
+<body>
+<form action="#" th:action="@{addUsers}" method="post" modelAttribute="user" >
+    <input th:field="*{user.name}" type="text" id="name" >
+    <input th:field="*{user.age}" type="text" id="age">
+    <input type="submit" value="Visit me">
+
+
+</form>
+<h1>All Active Users : </h1>
+
+<h1 th:each="user: ${userList}" th:text="${user.age}"> </h1>
+</body>
+</html>
